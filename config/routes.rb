@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get "carts/show"
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   devise_for :users
@@ -17,6 +18,8 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
-  resources :products
+  resources :products, only: [:index, :show]
   root "products#index"
+  resource :cart, only: [:show]
+  resources :cart_items, only: [:create, :update, :destroy]
 end

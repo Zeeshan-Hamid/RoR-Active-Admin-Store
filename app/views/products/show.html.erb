@@ -3,6 +3,5 @@
 <h3>Price: <%=@product.price%></h3>
 <p><%=@product.description%></p>
 <%= link_to "Back", root_path%>
-<%if user_signed_in?%>
-<%= link_to "Edit", edit_product_path(@product)%>
-<%end%>
+<%= link_to "Add to Cart", new_user_session_path, class: "btn btn-primary", data: { turbo: false } %>
+

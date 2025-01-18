@@ -11,3 +11,4 @@
 
 /* Require Active Admin styles */
 @import "active_admin";
+@import "bootstrap/dist/css/bootstrap.min.css";

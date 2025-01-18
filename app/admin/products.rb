@@ -1,5 +1,6 @@
+# app/admin/products.rb
 ActiveAdmin.register Product do
-    permit_params :name, :price, :img, :description, :admin_user_id  # Allow admin to set these fields
+    permit_params :name, :price, :img, :description, :admin_user_id
   
     index do
       selectable_column
@@ -21,7 +22,8 @@ ActiveAdmin.register Product do
         f.input :price
         f.input :img
         f.input :description
-        f.input :admin_user, as: :select, collection: AdminUser.all.pluck(:name, :id), include_blank: false  # Admin selects admin_user for products
+        
+        f.input :admin_user_id, as: :select, collection: AdminUser.all.pluck(:name, :id), include_blank: false
       end
       f.actions
     end
