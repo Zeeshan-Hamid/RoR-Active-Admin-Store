@@ -20,7 +20,8 @@ gem 'devise'
 gem 'activeadmin'
 gem 'webpacker'
 
-
+gem "dartsass-rails"
+gem "bootstrap", "~> 5.3.3"
 
 
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
@@ -67,3 +68,5 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
+
+gem "cssbundling-rails", "~> 1.4"
